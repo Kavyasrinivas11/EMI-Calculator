@@ -1,0 +1,91 @@
+<div class="container vh-90 d-flex justify-content-center align-items-center">
+  <form (ngSubmit)="register()" class="card shadow-lg border-0 mt-5 mb-5" style="max-width: 1000px; width: 100%;background-color:#e6ffff;">
+    <div class="row g-0">
+
+
+ <!-- Form Content -->
+      <div class="col-md-6">
+        <div class="card-body p-4 p-lg-5">
+
+          <h2 class="fw-bold mb-3 text-center">Smart EMI Calculator</h2>
+          <p class="text-muted text-center fs-5 mb-3">
+            Register to calculate your EMI instantly
+          </p>
+<!-- Username -->
+ <div class="mb-3">
+            <label class="form-label">Username</label>
+            <input [(ngModel)]="user.username"
+              type="text" name="username"
+              class="form-control form-control-lg"
+              placeholder="Enter your username"
+              required
+            />
+          </div>
+          <!-- Email -->
+          <div class="mb-3">
+            <label class="form-label">Email address</label>
+            <input [(ngModel)]="user.email"
+              type="email" name="email"
+              class="form-control form-control-lg"
+              placeholder="Enter your email"
+              required
+            />
+          </div>
+
+          <!-- Password -->
+          <div class="mb-3">
+            <label class="form-label">Password</label>
+            <input [(ngModel)]="user.password"
+              type="password" name="password"
+              class="form-control form-control-lg"
+              placeholder="Enter your password"
+              required
+            />
+          </div>
+
+          <!--Confirm Password -->
+          <div class="mb-3">
+            <label class="form-label">Confirm Password</label>
+            <input [(ngModel)]="user.confirm_password"
+              type="password" name="password"
+              class="form-control form-control-lg"
+              placeholder="Enter your password"
+              required
+            />
+          </div>
+
+          <!-- Remember + Forgot -->
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="rememberMe">
+              <label class="form-check-label" for="rememberMe">
+                Remember me
+              </label>
+            </div>
+            <a href="login" class="text-decoration-none small">
+             Already have an account ?
+            </a>
+          </div>
+
+          <!-- Button -->
+          <button type="submit" class="btn btn-primary btn-lg w-100">
+           Register
+          </button>
+
+        </div>
+      </div>
+
+
+
+      <!-- Image Section -->
+      <div class="col-md-6 d-none d-md-block">
+        <img src="https://img.freepik.com/free-vector/mobile-login-concept-illustration_114360-83.jpg"
+          class="img-fluid h-100 rounded-start"
+          alt="Login Illustration"
+        />
+      </div>
+
+
+    </div>
+  </form>
+</div>
