@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -12,6 +13,8 @@ export class Login {
   password: string = "";
   user: any = {};
 
+
+   constructor(private route:Router){}
   login() {
 
     this.user = JSON.parse(sessionStorage.getItem('userDetails') || "{}");
@@ -28,6 +31,7 @@ export class Login {
       // ✅ Check password
       if (this.password === this.user.password) {
         alert("Login Successful ...");
+        this.route.navigateByUrl('/dashboard')
       } else {
         alert("Password Mismatch");
       }
